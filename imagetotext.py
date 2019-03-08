@@ -21,8 +21,14 @@ import pytesseract
 #cv2.imwrite('Output Image.PNG',imS)
 #cv2.waitKey(0)
 
+#Place the tesseract executable cmd in the below
 pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
-TESSDATA_PREFIX = '/root/scripts/'
-output = pytesseract.image_to_string(PIL.Image.open('/root/Downloads/GRE.png').convert('RGB'), lang='eng')
-print(output)
 
+#test data where you want it to be stored..
+TESSDATA_PREFIX = '/root/scripts/'
+
+#place the image path in the below statement
+output = pytesseract.image_to_string(PIL.Image.open('/root/Downloads/GRE.png').convert('RGB'), lang='eng')
+
+##output is displayed on the terminal
+print(output)
